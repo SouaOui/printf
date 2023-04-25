@@ -24,6 +24,6 @@ int print_char(va_list arg);
 int print_str(va_list arg);
 int print_percentage(va_list arg);
 int print_integer(va_list arg);
-int char_num_print(int num, int *pr);
+int char_print_number(va_list args);
 
 #endif
