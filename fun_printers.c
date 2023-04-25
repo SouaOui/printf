@@ -49,6 +49,8 @@ int print_percentage(__attribute__((unused)) va_list arg)
 /**
 * char_num_print - print number using _putchar
 * @num: number parameter
+* @pr: number return length
+* Return: return length printed
 */
 
 int char_num_print(int num, int pr)
@@ -66,7 +68,7 @@ int char_num_print(int num, int pr)
 
 
 /**
-* print_percentage - print Percentage
+* print_integer - print Percentage
 * @arg: argument
 * Return: return length
 */
