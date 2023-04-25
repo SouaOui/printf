@@ -57,8 +57,7 @@ int char_num_print(int num, int *pr)
 {
 	if (num < 0)
 	{
-		_putchar ('-');
-		*pr = *pr + 1;
+		*pr = *pr + _putchar ('-');
 		num *= -1;
 	}
 	if (num / 10)
