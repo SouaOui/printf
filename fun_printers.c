@@ -62,8 +62,7 @@ int char_num_print(int num, int *pr)
 	}
 	if (num / 10)
 		char_num_print(num / 10, pr);
-	_putchar((num % 10) + '0');
-	*pr = *pr + 1;
+	*pr = *pr + _putchar((num % 10) + '0');
 	return (*pr);
 }
 
