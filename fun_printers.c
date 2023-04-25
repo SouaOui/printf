@@ -53,17 +53,19 @@ int print_percentage(__attribute__((unused)) va_list arg)
 * Return: return length printed
 */
 
-int char_num_print(int num, int pr)
+int char_num_print(int num, int *pr)
 {
 	if (num < 0)
 	{
 		_putchar ('-');
+		*pr = *pr + 1;
 		num *= -1;
 	}
 	if (num / 10)
 		char_num_print(num / 10, pr);
 	_putchar((num % 10) + '0');
-	return (pr++);
+	*pr = *pr + 1;
+	return (*pr);
 }
 
 
@@ -79,5 +81,5 @@ int print_integer(va_list arg)
 	int i = 0;
 
 	num = va_arg(arg, int);
-	return (char_num_print(num, i));
+	return (char_num_print(num, &i));
 }
