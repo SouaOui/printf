@@ -1,5 +1,13 @@
 #include "main.h"
 
+/**
+* handler - handler cases from format base string
+* @format: string base
+* @fun: string of structure
+* @arg: arguments
+* Return: return sum of printed characters
+*/
+
 int handler(const char *format, convert_t fun[], va_list arg)
 {
 	int i = 0, j, sum_printed = 0, check;

@@ -1,5 +1,11 @@
 #include "main.h"
 
+/**
+* _printf - print base on format characters
+* @format: base string
+* Return: return numbers characters printed
+*/
+
 int _printf(const char *format, ...)
 {
 	va_list arg;
@@ -11,8 +17,8 @@ int _printf(const char *format, ...)
 		{"%", print_percentage},
 		{NULL, NULL}
 	};
-	
-	va_start(arg,format);
+
+	va_start(arg, format);
 
 	sum_printed = handler(format, fun, arg);
 

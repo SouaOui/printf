@@ -5,7 +5,14 @@
 #include <stddef.h>
 
 
-typedef struct type_convert{
+/**
+* struct type_convert - structure contain character and function its use
+* @c: character
+* @f: function used to print
+*/
+
+typedef struct type_convert
+{
 	char *c;
 	int (*f)(va_list);
 } convert_t;

@@ -1,5 +1,11 @@
 #include "main.h"
 
+/**
+* print_char - print character
+* @arg: argument
+* Return: return length
+*/
+
 int print_char(va_list arg)
 {
 	char c;
@@ -9,11 +15,17 @@ int print_char(va_list arg)
 	return (1);
 }
 
+/**
+* print_str - print string
+* @arg: argument
+* Return: return length
+*/
+
 int print_str(va_list arg)
 {
 	char *s;
 	int len = 0;
-	
+
 	s = va_arg(arg, char *);
 	if (s == NULL)
 		s = "(null)";
@@ -24,6 +36,13 @@ int print_str(va_list arg)
 	}
 	return (len);
 }
+
+/**
+* print_percentage - print Percentage
+* @arg: argument
+* Return: return length
+*/
+
 int print_percentage(__attribute__((unused)) va_list arg)
 {
 	_putchar('%');
