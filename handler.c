@@ -16,8 +16,7 @@ int handler(const char *format, convert_t fun[], va_list arg)
 	{
 		if (format[i] == '%')
 		{
-			j = 0;
-			while (fun[j].c != NULL)
+			for (j = 0; fun[j].c != NULL; j++)
 			{
 				if (fun[j].c[0] == format[i + 1])
 				{
@@ -28,7 +27,6 @@ int handler(const char *format, convert_t fun[], va_list arg)
 					sum_printed += check;
 					break;
 				}
-				j++;
 			}
 			if (fun[j].c == NULL && format[i + 1] != ' ')
 			{
