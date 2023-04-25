@@ -23,18 +23,15 @@ int print_char(va_list arg)
 
 int print_str(va_list arg)
 {
-	char *s;
-	int len = 0;
+	const char *s;
+	int i;
 
-	s = va_arg(arg, char *);
+	s = va_arg(arg, const char *);
 	if (s == NULL)
 		s = "(null)";
-	while (*s)
-	{
-		len += 1;
-		_putchar(*s++);
-	}
-	return (len);
+	for (i = 0; s[i] != '\0'; i++)
+		_putchar(s[i]);
+	return (i);
 }
 
 /**
