@@ -36,6 +36,7 @@ int handler(const char *format, convert_t fun[], va_list arg)
 				{
 					_putchar(format[i]);
 					_putchar(format[i + 1]);
+					sum_printed += 2;
 					i++;
 				}
 				else
