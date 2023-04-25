@@ -18,6 +18,9 @@ int _printf(const char *format, ...)
 		{NULL, NULL}
 	};
 
+	if (format == NULL)
+		return (-1);
+
 	va_start(arg, format);
 
 	sum_printed = handler(format, fun, arg);
