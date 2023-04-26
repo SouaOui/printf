@@ -22,13 +22,10 @@ int print_hexadecimal(va_list arg)
 		lastDigit = valueToConvert % 16;
 
 		/*Convert the last digit to char*/
-		if (lastDigit < 10) {
+		if (lastDigit < 10)
 			charDigit = '0' + lastDigit;
-		}
 		else
-		{
 			charDigit = 'a' + (lastDigit - 10);
-		}
 
 		/*Put the last digit into the array*/
 		digitIndex -= 1;
@@ -36,7 +33,7 @@ int print_hexadecimal(va_list arg)
 		len += 1;
 
 		valueToConvert /= 16;
-	} while(valueToConvert != 0);
+	} while (valueToConvert != 0);
 	/*Get the actual width of the number and print it.*/
 	count = 8;
 	write(1, &digits[digitIndex], count);
@@ -66,13 +63,10 @@ int print_hexadecimal_upper(va_list arg)
 		lastDigit = valueToConvert % 16;
 
 		/*Convert the last digit to char*/
-		if (lastDigit < 10) {
+		if (lastDigit < 10)
 			charDigit = '0' + lastDigit;
-		}
 		else
-		{
 			charDigit = 'A' + (lastDigit - 10);
-		}
 
 		/*Put the last digit into the array*/
 		digitIndex -= 1;
@@ -80,7 +74,7 @@ int print_hexadecimal_upper(va_list arg)
 		len += 1;
 
 		valueToConvert /= 16;
-	} while(valueToConvert != 0);
+	} while (valueToConvert != 0);
 	/*Get the actual width of the number and print it.*/
 	count = 8;
 	write(1, &digits[digitIndex], count);

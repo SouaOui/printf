@@ -87,8 +87,9 @@ int print_octal(va_list arg)
 
 	check = 1;
 	len = 0;
-	decimalNumber = va_arg(arg,unsigned long int);
-	while (decimalNumber != 0) {
+	decimalNumber = va_arg(arg, unsigned long int);
+	while (decimalNumber != 0)
+	{
 		octalNumber += (decimalNumber % 8) * i;
 		decimalNumber /= 8;
 		i *= 10;
