@@ -57,6 +57,11 @@ int print_hexadecimal_upper(va_list arg)
 
 	/*Fill the `digits` array with the digits of the number*/
 	valueToConvert = va_arg(arg, unsigned long int);
+	if (valueToConvert == 0)
+	{
+		_putchar('0');
+		return (1);
+	}
 
 	do {
 		/*Get the value of the last digit*/
